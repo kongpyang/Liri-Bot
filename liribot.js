@@ -29,8 +29,8 @@ case "spotify-this-song":
 spotifysong(params);
 break;
 
-case "spotify-this-song":
-whatToDO(params);
+case "do-what-it-says":
+whatToDo(params);
 break;
 
 default: 
@@ -110,18 +110,14 @@ console.log(err);
 
 // ================LIRI LIRI================//
 
-function whatToDO(){
+function whatToDo(){
 fs.readFile('random.txt', 'utf8', function(err, data){
 if (err){ 
 return console.log(err);
 }
-var dataArr = data.split(',');
-UserInputs(dataArr[0], dataArr[1]);
+console.log(data.split(','));
 });
 }
-
-
-
 
 
 
